@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qween Moriah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+    }
+    header {
+      background-color: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin: 0;
+      color: #9146ff;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #9146ff;
+    }
+    section {
+      padding: 60px 40px;
+    }
+    .hero {
+      background-color: #f7f4ff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .about, .contact {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Qween Moriah</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Welcome to Qween Moriah's Art World</h2>
+    <p>Where expression meets imagination.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2 style="text-align:center; font-family: 'Playfair Display', serif;">Portfolio</h2>
+    <div class="gallery">
+      <!-- Update image filenames in the /artworks/ folder to change displayed art -->
+      <img src="artworks/artwork1.jpg" alt="Artwork 1">
+      <img src="artworks/artwork2.jpg" alt="Artwork 2">
+      <img src="artworks/artwork3.jpg" alt="Artwork 3">
+      <img src="artworks/artwork4.jpg" alt="Artwork 4">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 style="text-align:center; font-family: 'Playfair Display', serif;">About the Artist</h2>
+    <div class="about">
+      <p>
+        Qween Moriah is an imaginative artist blending emotion, identity, and storytelling through multiple mediums. With a passion ignited in childhood, her work now spans painting, sculpture, and digital design. Through vibrant visuals and subtle symbolism, she invites you to experience her world of color, curiosity, and creative transformation.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align:center; font-family: 'Playfair Display', serif;">Contact</h2>
+    <div class="contact">
+      <p>Interested in a commission or collaboration? Reach out!</p>
+      <p>Email: <a href="mailto:artist@qweenmoriah.com">artist@qweenmoriah.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/qweenmoriah" target="_blank">@qweenmoriah</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Qween Moriah. All rights reserved.
+  </footer>
+</body>
+</html>
