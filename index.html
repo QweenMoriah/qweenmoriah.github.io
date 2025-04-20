@@ -1,75 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qween Moriah</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fefefe;
-      color: #333;
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      color: #222;
     }
     header {
-      background-color: #fff;
-      padding: 20px 40px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin: 0;
-      color: #9146ff;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #9146ff;
-    }
-    section {
-      padding: 60px 40px;
-    }
-    .hero {
-      background-color: #f7f4ff;
+      background-color: #14213d;
+      color: white;
+      padding: 20px;
       text-align: center;
-      padding: 100px 20px;
     }
-    .hero h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+    h2 {
+      color: #14213d;
+      text-align: center;
+      margin-top: 40px;
     }
-    .gallery {
+    .gallery, .carousel {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      padding: 20px;
+    }
+    .carousel {
+      overflow-x: auto;
+      white-space: nowrap;
+      display: flex;
+      scroll-snap-type: x mandatory;
+    }
+    .carousel img {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 300px;
+      margin-right: 16px;
+      border-radius: 8px;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .gallery img {
       width: 100%;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .about, .contact {
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     footer {
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
+      padding: 30px;
+      font-size: 0.8rem;
       color: #666;
     }
   </style>
@@ -77,49 +59,165 @@
 <body>
   <header>
     <h1>Qween Moriah</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Gallery Preview</p>
   </header>
 
-  <section class="hero" id="home">
-    <h2>Welcome to Qween Moriah's Art World</h2>
-    <p>Where expression meets imagination.</p>
-  </section>
-
-  <section id="portfolio">
-    <h2 style="text-align:center; font-family: 'Playfair Display', serif;">Portfolio</h2>
-    <div class="gallery">
-      <!-- Update image filenames in the /artworks/ folder to change displayed art -->
-      <img src="artworks/artwork1.jpg" alt="Artwork 1">
-      <img src="artworks/artwork2.jpg" alt="Artwork 2">
-      <img src="artworks/artwork3.jpg" alt="Artwork 3">
-      <img src="artworks/artwork4.jpg" alt="Artwork 4">
+  <h2>Paintings</h2>
+  <div class="gallery">
+    <div>
+      <img src="paintings/Moriah.painting1.png" alt="Moriah Painting 1">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
     </div>
-  </section>
-
-  <section id="about">
-    <h2 style="text-align:center; font-family: 'Playfair Display', serif;">About the Artist</h2>
-    <div class="about">
-      <p>
-        Qween Moriah is an imaginative artist blending emotion, identity, and storytelling through multiple mediums. With a passion ignited in childhood, her work now spans painting, sculpture, and digital design. Through vibrant visuals and subtle symbolism, she invites you to experience her world of color, curiosity, and creative transformation.
-      </p>
+    <div>
+      <img src="paintings/Moriah.painting2.png" alt="Moriah Painting 2">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
     </div>
-  </section>
-
-  <section id="contact">
-    <h2 style="text-align:center; font-family: 'Playfair Display', serif;">Contact</h2>
-    <div class="contact">
-      <p>Interested in a commission or collaboration? Reach out!</p>
-      <p>Email: <a href="mailto:artist@qweenmoriah.com">artist@qweenmoriah.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/qweenmoriah" target="_blank">@qweenmoriah</a></p>
-    </div>
-  </section>
+  </div>
 
   <footer>
+    &copy; 2025 Qween Moriah. All rights reserved.
+  </footer>
+
+  <h2>Sculptures</h2>
+  <div class="carousel">
+    <img src="sculptures/Carouseltogether.book/Moriah.sculpture6.png" alt="Book 1">
+    <img src="sculptures/Carouseltogether.book/Moriah.sculpture7.png" alt="Book 2">
+    <img src="sculptures/Carouseltogether.book/Moriah.sculpture8.png" alt="Book 3">
+  </div>
+  <p style="text-align:center;"><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+
+  <div class="carousel">
+    <img src="sculptures/Carouseltogether.light/Moriah.sculpture3.png" alt="Light 1">
+    <img src="sculptures/Carouseltogether.light/Moriah.scultpute2video.mp4" alt="Light 2 (Video)">
+  </div>
+  <p style="text-align:center;"><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+
+  <div class="gallery">
+    <div>
+      <img src="sculptures/Moriah.sculpture1.png" alt="Sculpture 1">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="sculptures/Moriah.sculpture2.png" alt="Sculpture 2">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="sculptures/Moriah.sculpture4.png" alt="Sculpture 4">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="sculptures/Moriah.sculpture5.png" alt="Sculpture 5">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="sculptures/Moriah.volumestudy.1.png" alt="Volume Study">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="sculptures/RX-USA.jpg" alt="RX-USA">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+  </div>
+
+<h2>Prints</h2>
+
+  <div class="carousel">
+    <img src="prints/Carouseltogether.zine/Moriah.zine1.png" alt="Zine 1">
+    <img src="prints/Carouseltogether.zine/Moriah.zine2.png" alt="Zine 2">
+    <img src="prints/Carouseltogether.zine/Moriah.zine3.png" alt="Zine 3">
+    <img src="prints/Carouseltogether.zine/Moriah.zine4.png" alt="Zine 4">
+    <img src="prints/Carouseltogether.zine/Moriah.zine5.png" alt="Zine 5">
+  </div>
+  <p style="text-align:center;"><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+  </div>
+
+  <div class="carousel">
+    <img src="prints/Carouseltogether.pattern/Moriah.screenprint2.jpg" alt="Pattern 1">
+    <img src="prints/Carouseltogether.pattern/Moriah.screenprint3.jpg" alt="Pattern 2">
+  </div>
+  <p style="text-align:center;"><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+  </div>
+
+  <div class="carousel">
+    <img src="prints/Carouseltogether.reductive/Moriah.reductiveprint1.jpg" alt="Reductive 1">
+    <img src="prints/Carouseltogether.reductive/Moriah.reductiveprint2.jpg" alt="Reductive 2">
+    <img src="prints/Carouseltogether.reductive/Moriah.reductiveprintbag.1.png" alt="Reductive Bag">
+  </div>
+  <p style="text-align:center;"><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+  </div>
+
+  <div class="carousel">
+    <img src="prints/Carousel together.italio/Moriah.print1.png" alt="Italio 1">
+    <img src="prints/Carousel together.italio/Moriah.print2.png" alt="Italio 2">
+    <img src="prints/Carousel together.italio/Moriah.print3.jpg" alt="Italio 3">
+    <img src="prints/Carousel together.italio/Moriah.print4.png" alt="Italio 4">
+  </div>
+  <p style="text-align:center;"><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+  </div>
+  <div class="gallery">
+    <div>
+      <img src="prints/Moriah.rubberprint.1.png" alt="Rubber Print">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="prints/Moriah.screenprint1.png" alt="Screenprint 1">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="prints/Moriah.screenprint4.jpg" alt="Screenprint 4">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="prints/Moriah.screenprint5.jpg" alt="Screenprint 5">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="prints/Moriah.screenprint6.jpg" alt="Screenprint 6">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="prints/Moriah.screenprint7.jpg" alt="Screenprint 7">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+    <div>
+      <img src="prints/Moriah.woodprint1.jpg" alt="Wood Print 1">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+  </div>
+
+  <h2>Illustrations</h2>
+  <div class="carousel">
+    <img src="illustrations/Carouseltogether/Lady Enid.2nd Act - Irma Vep.jpg" alt="Irma Vep 1">
+    <img src="illustrations/Carouseltogether/Lady Enid.Nightgown - Irma Vep.jpg" alt="Irma Vep 2">
+    <img src="illustrations/Carouseltogether/Lady Enid.meeting - Irma Vep.jpg" alt="Irma Vep 3">
+    <img src="illustrations/Carouseltogether/Nicodemus - Irma Vep.jpg" alt="Irma Vep 4">
+    <img src="illustrations/Carouseltogether/Werewolf - Irma Vep.jpg" alt="Irma Vep 5">
+  </div>
+  <p style="text-align:center;"><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+
+  <div class="gallery">
+    <div>
+      <img src="illustrations/Moriah.charcoal1.png" alt="Charcoal Illustration">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+  </div>
+
+  <h2>Ceramics</h2>
+  <div class="carousel">
+    <img src="ceramics/Carouseltogether/Moriah.ceramics2.png" alt="Ceramics 2">
+    <img src="ceramics/Carouseltogether/Moriah.ceramics3.png" alt="Ceramics 3">
+  </div>
+  <p style="text-align:center;"><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+
+  <div class="gallery">
+    <div>
+      <img src="ceramics/Moriah.ceramics1.png" alt="Ceramic 1">
+      <p><strong>Title of Piece goes here</strong><br>Date<br>Material</p>
+    </div>
+  </div>
+
+</body>
+</html>
     &copy; 2025 Qween Moriah. All rights reserved.
   </footer>
 </body>
